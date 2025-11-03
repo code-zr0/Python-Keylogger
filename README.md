@@ -46,7 +46,7 @@ Using Python's `pyinput` library, we are able to handle keystroke detection and 
 While the termination flag is not set, this function runs continiously in the background exfiltrating the data of logged keystrokes to my portfolio email account. To evade detection more effectively, each email is sent within random intervals between three and seven seconds.<br/><br/>
 <img width="1179" height="367" alt="periodic_email_sender" src="https://github.com/user-attachments/assets/41c889fc-79b2-4354-b4cf-7c45c116a665" /><br/><br/>
 
-Securely connecting to Gmail’s SMTP server over TLS, this function transmits emails via port 587. It constructs a plaintext message using  from the  library, authenticates with portfolio credentials, and delivers the data to a designated recipient.<br/><br/>
+Securely connecting to Gmail’s SMTP server over TLS, this function transmits emails via port 587. It constructs a plaintext message using `MIMEMultipart` from the `email.mime` library, authenticates with portfolio credentials, and delivers the data to a designated recipient.<br/><br/>
 <img width="567" height="394" alt="send_email_snippet" src="https://github.com/user-attachments/assets/7aec2d07-2053-4d39-86d2-50a410112384" /><br/><br/>
 
 With the core functionality complete, the program can be compiled into a standalone executable with the `pyinstaller` library to simulate legitimate driver update software.
