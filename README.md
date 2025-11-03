@@ -40,7 +40,7 @@ Utilizing multiple threads, the program is able to run key components of the sim
 - By using daemon threads, both the disclaimer and fake update window are able to terminate gracefully so that logging may persist. Otherwise, closing out of both windows would cause the program to terminate immediately.<br/><br/>
 <img width="918" height="206" alt="main_py" src="https://github.com/user-attachments/assets/e405925e-203d-404f-8181-8ce7f704a115" /><br/><br/>
 
-Using Python's `pyinput` library, we are able to handle keystroke detection and logging. Triggering the release event captures the key name, timestamps it, and appends the data to a log file stored in a discreet directory not usually looked in. This logic ensures that every keystrong is recorded in real time, while also providing a clean exit strategy for ethical control.<br/><br/>
+Using Python's `pyinput` library, we are able to handle keystroke detection and logging. Triggering the release event captures the key name, timestamps it, and appends the data to a log file stored in a discreet directory not usually looked in. This logic ensures that every keystroke is recorded in real time, while also providing a clean exit strategy for ethical control.<br/><br/>
 <img width="664" height="529" alt="keylogger_keystroke_listeners" src="https://github.com/user-attachments/assets/18ef26da-3e4b-4ab0-99a3-718af49a0391" /><br/><br/>
 
 While the termination flag is not set, this function runs continiously in the background exfiltrating the data of logged keystrokes to my portfolio email account. To evade detection more effectively, each email is sent within random intervals between three and seven seconds.<br/><br/>
